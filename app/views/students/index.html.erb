@@ -1,0 +1,15 @@
+<h3>Student一覧</h3>
+<%= link_to '新規投稿へ', new_student_path %>
+<%= button_to 'ログアウト', destroy_user_session_path, method: :delete %>
+
+<div class="students-container">
+  <% @students.each do |t| %>
+    <div class="student">
+      <%= t.name %>
+      <%= t.profile %>
+      <%= t.mentor %>
+      <%= t.grade %>
+      <%= t.user.email %>
+    </div>
+  <% end %>
+</div>

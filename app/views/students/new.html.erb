@@ -1,0 +1,16 @@
+<h1>GeekKobe Students</h1>
+<h3>新規student</h3>
+<%= form_for @student do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, :size => 100 %>
+    <%= f.label :profile %>
+    <%= f.text_field :profile, :size => 100 %>
+    <%= f.label :mentor %>
+    <%= f.text_field :mentor, :size => 100 %>
+    <%= f.label :grade %>
+    <%= f.text_field :grade, :size => 100 %>
+  </div>
+  <%= f.submit "登録する" %>
+<% end %>
+<%= link_to "student一覧に戻る", students_path %>
